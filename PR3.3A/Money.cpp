@@ -48,8 +48,8 @@ Money::Money(double z)
 
 Money::Money(const Money& r)
 {
-	long a = r.GetHrn();
-	unsigned long b = r.GetKop();
+	int a = r.GetHrn();
+	int b = r.GetKop();
 
 	while (b > 99)
 	{
@@ -73,14 +73,8 @@ Money operator -(const Money& l, const Money& r)
 {
 	Money t;
 
-	long a = l.GetHrn() - r.GetHrn() + floor((l.GetKop() - r.GetKop()) / 100);
-	unsigned long b = (l.GetKop() - r.GetKop()) % 100;
-
-	if (b > 99)
-	{
-		b -= 100;
-		a++;
-	}
+	long a = l.GetHrn() - r.GetHrn();
+	unsigned long b = l.GetKop() - r.GetKop();
 
 	t.SetHrn(a);
 	t.SetKop(b);
@@ -92,8 +86,8 @@ Money operator *(const Money& l, const double k)
 {
 	Money t;
 
-	long a = l.GetHrn() * k;
-	unsigned long b = l.GetKop() * k;
+	long a = (l.GetHrn() * k);
+	unsigned long b = (l.GetKop() * k);
 
 	while (b > 99)
 	{
@@ -152,7 +146,9 @@ Money::operator string() const
 
 ostream& operator << (ostream& out, const Money& r)
 {
-	return out << (string)r;
+	out << string(r);
+
+	return out;
 }
 
 istream& operator >> (istream& in, Money& r)
@@ -175,21 +171,21 @@ bool Money::operator ==(const Money& x)
 	return this->GetHrn() == x.GetHrn() && this->GetKop() == x.GetKop();
 }
 
-/*bool Money::operator !=(const Money& x)
+bool Money::operator !=(const Money& x)
 {
-	return !(this->hrn == x.hrn && this->kop == x.kop);
+	return !(this->GetHrn() == x.GetHrn() && this->GetKop() == x.GetKop());
 }
 
 bool Money::operator >(const Money& x)
 {
-	if (this->hrn > x.hrn)
+	if (this->GetHrn() > x.GetHrn())
 	{
 		return true;
 	}
 
-	if (this->hrn == x.hrn)
+	if (this->GetHrn() == x.GetHrn())
 	{
-		if (this->kop > x.kop)
+		if (this->GetKop() > x.GetKop())
 		{
 			return true;
 		}
@@ -199,7 +195,7 @@ bool Money::operator >(const Money& x)
 		}
 	}
 
-	if (this->hrn < x.hrn)
+	if (this->GetHrn() < x.GetHrn())
 	{
 		return false;
 	}
@@ -207,14 +203,14 @@ bool Money::operator >(const Money& x)
 
 bool Money::operator <(const Money& x)
 {
-	if (this->hrn < x.hrn)
+	if (this->GetHrn() < x.GetHrn())
 	{
 		return true;
 	}
 
-	if (this->hrn == x.hrn)
+	if (this->GetHrn() == x.GetHrn())
 	{
-		if (this->kop < x.kop)
+		if (this->GetKop() < x.GetKop())
 		{
 			return true;
 		}
@@ -224,7 +220,7 @@ bool Money::operator <(const Money& x)
 		}
 	}
 
-	if (this->hrn > x.hrn)
+	if (this->GetHrn() > x.GetHrn())
 	{
 		return false;
 	}
@@ -232,30 +228,30 @@ bool Money::operator <(const Money& x)
 
 bool Money::operator >=(const Money& x)
 {
-	if (this->hrn > x.hrn)
+	if (this->GetHrn() > x.GetHrn())
 	{
 		return true;
 	}
 
-	if (this->hrn == x.hrn)
+	if (this->GetHrn() == x.GetHrn())
 	{
-		if (this->kop > x.kop)
+		if (this->GetKop() > x.GetKop())
 		{
 			return true;
 		}
 
-		if (this->kop == x.kop)
+		if (this->GetKop() == x.GetKop())
 		{
 			return true;
 		}
 
-		if (this->kop < x.kop)
+		if (this->GetKop() < x.GetKop())
 		{
 			return false;
 		}
 	}
 
-	if (this->hrn < x.hrn)
+	if (this->GetHrn() < x.GetHrn())
 	{
 		return false;
 	}
@@ -263,31 +259,87 @@ bool Money::operator >=(const Money& x)
 
 bool Money::operator <=(const Money& x)
 {
-	if (this->hrn < x.hrn)
+	if (this->GetHrn() < x.GetHrn())
 	{
 		return true;
 	}
 
-	if (this->hrn == x.hrn)
+	if (this->GetHrn() == x.GetHrn())
 	{
-		if (this->kop < x.kop)
+		if (this->GetKop() < x.GetKop())
 		{
 			return true;
 		}
 
-		if (this->kop == x.kop)
+		if (this->GetKop() == x.GetKop())
 		{
 			return true;
 		}
 
-		if (this->kop > x.kop)
+		if (this->GetKop() > x.GetKop())
 		{
 			return false;
 		}
 	}
 
-	if (this->hrn > x.hrn)
+	if (this->GetHrn() > x.GetHrn())
 	{
 		return false;
 	}
-}*/
+}
+
+Money& Money::operator ++()
+{
+	int a = this->GetHrn();
+	int b = this->GetKop();
+	a++;
+	b++;
+
+	this->SetHrn(a);
+	this->SetKop(b);
+
+	return *this;
+}
+
+Money& Money::operator --()
+{
+	int a = this->GetHrn();
+	int b = this->GetKop();
+	a--;
+	b--;
+
+	this->SetHrn(a);
+	this->SetKop(b);
+
+	return *this;
+}
+
+Money Money::operator ++(int)
+{
+	Money t(*this);
+
+	int a = this->GetHrn();
+	int b = this->GetKop();
+	a++;
+	b++;
+
+	this->SetHrn(a);
+	this->SetKop(b);
+
+	return t;
+}
+
+Money Money::operator --(int)
+{
+	Money t(*this);
+	
+	int a = this->GetHrn();
+	int b = this->GetKop();
+	a--;
+	b--;
+
+	this->SetHrn(a);
+	this->SetKop(b);
+
+	return t;
+}

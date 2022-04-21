@@ -10,11 +10,9 @@ public:
 	Money(double z);
 	~Money(void);
 
-	Money& operator = (const Money&);
-
-	friend Money operator -(const Money& l, const Money& r);
-	friend Money operator *(const Money& l, const double k);
-	friend Money operator *(const double k, const Money& r);
+	friend Money operator -(const Money&, const Money&);
+	friend Money operator *(const Money&, const double);
+	friend Money operator *(const double, const Money&);
 
 	bool operator ==(const Money&);
 	bool operator !=(const Money&);

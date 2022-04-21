@@ -1,0 +1,6 @@
+﻿  UT3.3A.cpp
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Pair.cpp(29,16): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Pair.cpp(30,16): warning C4244: '=': conversion from 'double' to 'unsigned long', possible loss of data
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Pair.cpp(38,16): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Pair.cpp(39,16): warning C4244: '=': conversion from 'double' to 'unsigned long', possible loss of data
+  UT3.3A.vcxproj -> D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\Debug\UT3.3A.dll

@@ -14,7 +14,7 @@ Pair::Pair(const Pair& r)
 Pair::~Pair(void)
 { }
 
-/*Pair operator -(const Pair& l, const Pair& r)
+Pair operator -(const Pair& l, const Pair& r)
 {
 	Pair t;
 	t.hrn = l.hrn - r.hrn;
@@ -39,7 +39,7 @@ Pair operator *(const double k, const Pair& r)
 	t.kop = r.kop * k;
 
 	return t;
-}*/
+}
 
 Pair::operator string() const
 {
