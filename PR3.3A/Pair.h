@@ -23,10 +23,6 @@ public:
 	void SetHrn(long value) { hrn = value; }
 	void SetKop(unsigned long value) { kop = value; }
 
-	friend Pair operator -(const Pair& l, const Pair& r);
-	friend Pair operator *(const Pair& l, const double k);
-	friend Pair operator *(const double k, const Pair& r);
-
 	operator string() const;
 	friend ostream& operator << (ostream&, const Pair&);
 	friend istream& operator >> (istream&, Pair&);

@@ -22,8 +22,6 @@ public:
 	bool operator <=(const Money&);
 
 	operator string() const;
-	friend ostream& operator << (ostream&, const Money&);
-	friend istream& operator >> (istream&, Money&);
 
 	Money& operator ++();
 	Money& operator --();

@@ -1,12 +1,10 @@
-﻿  Money.cpp
-D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Money.cpp(89,9): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
-D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Money.cpp(90,18): warning C4244: 'initializing': conversion from 'double' to 'unsigned long', possible loss of data
-D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Money.cpp(108,9): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
-D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Money.cpp(109,18): warning C4244: 'initializing': conversion from 'double' to 'unsigned long', possible loss of data
-  Source.cpp
-  Generating Code...
-D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Money.cpp(202): warning C4715: 'Money::operator>': not all control paths return a value
-D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Money.cpp(258): warning C4715: 'Money::operator>=': not all control paths return a value
-D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Money.cpp(227): warning C4715: 'Money::operator<': not all control paths return a value
-D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\Money.cpp(289): warning C4715: 'Money::operator<=': not all control paths return a value
+﻿  MoneyC.cpp
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\MoneyC.cpp(89,9): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\MoneyC.cpp(90,18): warning C4244: 'initializing': conversion from 'double' to 'unsigned long', possible loss of data
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\MoneyC.cpp(108,9): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\MoneyC.cpp(109,18): warning C4244: 'initializing': conversion from 'double' to 'unsigned long', possible loss of data
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\MoneyC.cpp(203): warning C4715: 'MoneyC::operator>': not all control paths return a value
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\MoneyC.cpp(259): warning C4715: 'MoneyC::operator>=': not all control paths return a value
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\MoneyC.cpp(290): warning C4715: 'MoneyC::operator<=': not all control paths return a value
+D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\PR3.3A\MoneyC.cpp(228): warning C4715: 'MoneyC::operator<': not all control paths return a value
   PR3.3A.vcxproj -> D:\Student\Volvenko Ivan IT-12\2 сем\ООП\PR3.3A\Debug\PR3.3A.exe

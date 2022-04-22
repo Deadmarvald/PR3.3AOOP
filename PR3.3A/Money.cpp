@@ -120,52 +120,6 @@ Money operator *(const double k, const Money& r)
 	return t;
 }
 
-string format(unsigned long b)
-{
-	stringstream ss;
-
-	if (b < 10)
-	{
-		ss << "0";
-	}
-
-	ss << b;
-
-	return ss.str();
-}
-
-Money::operator string() const
-{
-	stringstream ss;
-
-	ss << endl;
-	ss << GetHrn() << "," << format(GetKop()) << " hrn.";
-
-	return ss.str();
-}
-
-ostream& operator << (ostream& out, const Money& r)
-{
-	out << string(r);
-
-	return out;
-}
-
-istream& operator >> (istream& in, Money& r)
-{
-	long a; 
-	unsigned long b;
-
-	cout << endl;
-	cout << "hrn = "; in >> a;
-	cout << "kop = "; in >> b;
-
-	r.SetHrn(a); 
-	r.SetKop(b);
-
-	return in;
-}
-
 bool Money::operator ==(const Money& x)
 {
 	return this->GetHrn() == x.GetHrn() && this->GetKop() == x.GetKop();

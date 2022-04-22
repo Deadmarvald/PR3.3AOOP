@@ -14,33 +14,6 @@ Pair::Pair(const Pair& r)
 Pair::~Pair(void)
 { }
 
-Pair operator -(const Pair& l, const Pair& r)
-{
-	Pair t;
-	t.hrn = l.hrn - r.hrn;
-	t.kop = l.kop - r.kop;
-
-	return t;
-}
-
-Pair operator *(const Pair& l, const double k)
-{
-	Pair t;
-	t.hrn = l.hrn * k;
-	t.kop = l.kop * k;
-
-	return t;
-}
-
-Pair operator *(const double k, const Pair& r)
-{
-	Pair t;
-	t.hrn = r.hrn * k;
-	t.kop = r.kop * k;
-
-	return t;
-}
-
 Pair::operator string() const
 {
 	stringstream ss;

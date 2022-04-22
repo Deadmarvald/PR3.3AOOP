@@ -140,11 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Money.cpp" />
+    <ClCompile Include="MoneyC.cpp" />
     <ClCompile Include="Pair.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Money.h" />
+    <ClInclude Include="MoneyC.h" />
     <ClInclude Include="Pair.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
